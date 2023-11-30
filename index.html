@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jack's Fantasy Football Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" href="./favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="This is a calculator that will determine for you the expected amount of points (per game) that a given player will score in future games. This website was made for Jack and uses his algorithm to calculate the expected points.">
+    <meta name="keywords"
+        content="Fantasy Football, Calculator, Fantasy Football Calculator, Fantasy Football Points, Fantasy Football Points Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game, Fantasy Football Points Per Game Calculator, Fantasy Football Points Per Game Calculator">
+    <meta name="author" content="AJ">
+    <meta property="og:title" content="Jack's Fantasy Football Calculator">
+    <meta property="og:description"
+        content="This is a calculator that will determine for you the expected amount of points (per game) that a given player will score in future games. This website was made for Jack and uses his algorithm to calculate the expected points.">
+    <meta property="og:image" content="https://ffc.ajdev.pro/website.png">
+    <meta property="og:url" content="https://ffc.ajdev.pro">
+    <meta property="og:site_name" content="Jack's Fantasy Football Calculator">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://ffc.ajdev.pro">
+    <meta name="twitter:title" content="Jack's Fantasy Football Calculator">
+    <meta name="twitter:description"
+        content="This is a calculator that will determine for you the expected amount of points (per game) that a given player will score in future games. This website was made for Jack and uses his algorithm to calculate the expected points.">
+    <meta name="twitter:image" content="https://ffc.ajdev.pro/website.png">
+    <meta name="twitter:image:alt" content="Jack's Fantasy Football Calculator">
+    <meta name="theme-color" content="#000000">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="web">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+</head>
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="https://ajdev.pro">Home</a></li>
+                <li><a href="https://youtube.com/@internet_aj">YouTube</a></li>
+                <li><a href="https://github.com/ajdibo23">GitHub</a></li>
+                <li><a href="https://www.instagram.com/ajdibo23">Instagram</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Jack's Fantasy Football Calculator</h1>
+    <p>This is a calculator that will determine for you the expected amount of points (per game) that a given player
+        will score in future games. This website was made for Jack and uses his algorithm to calculate the expected
+        points.</p>
+    <hr>
+    <div id="options">
+        <select id="team">
+            <option value="ARI/arizona-cardinals">Arizona Cardinals</option>
+            <option value="ATL/atlanta-falcons">Atlanta Falcons</option>
+            <option value="BAL/baltimore-ravens">Baltimore Ravens</option>
+            <option value="BUF/buffalo-bills">Buffalo Bills</option>
+            <option value="CAR/carolina-panthers">Carolina Panthers</option>
+            <option value="CHI/chicago-bears">Chicago Bears</option>
+            <option value="CIN/cincinnati-bengals">Cincinnati Bengals</option>
+            <option value="CLE/cleveland-browns">Cleveland Browns</option>
+            <option value="DAL/dallas-cowboys">Dallas Cowboys</option>
+            <option value="DEN/denver-broncos">Denver Broncos</option>
+            <option value="DET/detroit-lions">Detroit Lions</option>
+            <option value="GB/green-bay-packers">Green Bay Packers</option>
+            <option value="HOU/houston-texans">Houston Texans</option>
+            <option value="IND/indianapolis-colts">Indianapolis Colts</option>
+            <option value="JAX/jacksonville-jaguars">Jacksonville Jaguars</option>
+            <option value="KC/kansas-city-chiefs">Kansas City Chiefs</option>
+            <option value="LAC/los-angeles-chargers">Los Angeles Chargers</option>
+            <option value="LAR/los-angeles-rams">Los Angeles Rams</option>
+            <option value="MIA/miami-dolphins">Miami Dolphins</option>
+            <option value="MIN/minnesota-vikings">Minnesota Vikings</option>
+            <option value="NE/new-england-patriots">New England Patriots</option>
+            <option value="NO/new-orleans-saints">New Orleans Saints</option>
+            <option value="NYG/new-york-giants">New York Giants</option>
+            <option value="NYJ/new-york-jets">New York Jets</option>
+            <option value="OAK/oakland-raiders">Oakland Raiders</option>
+            <option value="PHI/philadelphia-eagles">Philadelphia Eagles</option>
+            <option value="PIT/pittsburgh-steelers">Pittsburgh Steelers</option>
+            <option value="SEA/seattle-seahawks">Seattle Seahawks</option>
+            <option value="SF/san-francisco-49ers">San Francisco 49ers</option>
+            <option value="TB/tampa-bay-buccaneers">Tampa Bay Buccaneers</option>
+            <option value="TEN/tennessee-titans">Tennessee Titans</option>
+            <option value="WAS/washington-commanders">Washington Commanders</option>
+        </select>
+        <button onclick="teamSelectedButton()" id="nextButton1">Next</button>
+    </div>
+    <center>
+        <div id="loading">
+            <div class="loading-spinner"></div>
+        </div>
+    </center>
+    <script src="./script.js"></script>
+</body>
+
+</html>
