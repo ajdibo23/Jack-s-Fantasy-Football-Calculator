@@ -88,22 +88,24 @@ async function playerSelectedButton() {
                 position = doc.querySelector('.PageTitle-description').innerHTML.toString().split(' • ')[2].split('\n')[0];
                 let table = doc.querySelectorAll('table')[2];
                 let row = table.querySelectorAll('tr')[2];
-                if (row.querySelectorAll('td')[8]) {
-                    let col = row.querySelectorAll('td')[8];
-                    if (col.children[0].innerHTML) {
-                        ppg = parseFloat(col.children[0].innerHTML);
-                        getSchedule();
-                    } else {
-                        alert("an unknown error occured (please try again)");
-                    }
+                let index = 0;
+                if (position == "RB") {
+                    index = 9;
+                } else if (position == "QB") {
+                    index = 7;
+                } else if (position == "WR") {
+                    index = 8;
+                } else if (position == "TE") {
+                    index = 8;
+                } else if (position == "K") {
+                    index = 6;
+                }
+                let col = row.querySelectorAll('td')[index];
+                if (col.children[0].innerHTML) {
+                    ppg = parseFloat(col.children[0].innerHTML);
+                    getSchedule();
                 } else {
-                    let col = row.querySelectorAll('td')[7];
-                    if (col.children[0].innerHTML) {
-                        ppg = parseFloat(col.children[0].innerHTML);
-                        getSchedule();
-                    } else {
-                        alert("an unknown error occured (please try again)");
-                    }
+                    alert("an unknown error occured (please try again)");
                 }
             }
         });
@@ -194,9 +196,13 @@ async function getOtherThings() {
             numbersToAddFuture.forEach(element => {
                 averageFuture += element;
             });
+            console.log('PPG: ' + ppg);
             averagePast = averagePast / numbersToAddPast.length;
             averageFuture = averageFuture / numbersToAddFuture.length;
+            console.log('Average Past Rank: ' + averagePast);
+            console.log('Average Future Rank: ' + averageFuture);
             let epppg = (ppg / averagePast) * 16;
+            console.log('EPPPG: ' + epppg);
             let expectedFuturePPG = (epppg * averageFuture);
             let finalAnswer = expectedFuturePPG / 16;
             finalAnswer = finalAnswer.toFixed(2);
@@ -217,7 +223,7 @@ async function getOtherThings() {
 }
 
 document.getElementById("team").addEventListener("change", function () {
-
+    resetButton();
 });
 
 async function resetButton() {
